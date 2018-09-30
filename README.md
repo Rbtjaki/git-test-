@@ -1,2 +1,2 @@
-# git-test-
-cwiczenie
+# WARSZATATY 1
+Zadania
