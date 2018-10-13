@@ -1,9 +1,9 @@
-package pl.r_jaroslawski.workshops.random_numbers;
+package Zgadywanie_liczb_2;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class TYPOWANIE1 {
+public class Zgadywanieliczb2 {
 
     public static void main(String[] args) {
 
@@ -21,15 +21,15 @@ public class TYPOWANIE1 {
 
         int n = (int)(Math.log(zakres)/ Math.log(2));
 
-        System.out.println(" Wymyœl jak¹s liczbê od  1 do 1000.");
+        System.out.println(" WymyÅ“l jakÂ¹s liczbÃª od  1 do 1000.");
 
-         num = los.nextInt(zakres - grDol) + grDol;
+        num = los.nextInt(zakres - grDol) + grDol;
 
-        System.out.println("jeaeli jest wiéksza niz " + num + " W, jesli mniejsza M");
+        System.out.println("jeaeli jest wiÃ©ksza niz " + num + " W, jesli mniejsza M");
 
         decyzja = skan.nextLine();
 
-        for (int i = 0; i < n + 5; i++) {
+        while(decyzja != "T" && decyzja != "t") {
 
             if (decyzja.equals("W") || decyzja.equals("w")) {
 
@@ -39,17 +39,15 @@ public class TYPOWANIE1 {
 
                 zakres = num;
 
-            } else if (decyzja.equals("T") || decyzja.equals("t")){ continue;}
+            } else if (decyzja.equals("T") || decyzja.equals("t")){System.out.print("Twoja liczna to: " + num); break;}
 
-                num = los .nextInt(zakres - grDol + 1)+ grDol;
+            num = los .nextInt(zakres - grDol + 1)+ grDol;
 
-                System.out.print("Czy to liczba: " + num + " ");
+            System.out.print("Czy to liczba: " + num + " ");
 
-                decyzja = skan.nextLine();
-             }
+            decyzja = skan.nextLine();
 
-            System.out.print("Twoja liczna to: " + num);
-        skan.close();
         }
-
+        skan.close();
     }
+}
